@@ -1,0 +1,16 @@
+- hosts: tag_name_master
+  roles: 
+      - name: k8s master configuring
+        role: k8smaster
+
+
+
+- hosts : tag_name_worker
+  vars_prompt:
+         - name: "cluster_token"
+           prompt: "Enter cluster token "
+           private: no
+  roles: 
+      - name: k8s worker configuring
+        role: k8sworker
+

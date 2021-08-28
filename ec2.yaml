@@ -1,0 +1,4 @@
+- hosts: localhost
+  roles: 
+      - name: ec2 launch 
+        role: ec2

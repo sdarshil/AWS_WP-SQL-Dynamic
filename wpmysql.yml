@@ -1,0 +1,4 @@
+- hosts: tag_Name_master
+  roles: 
+      - name: "wpsql configureing"
+        role: wp-mysql
